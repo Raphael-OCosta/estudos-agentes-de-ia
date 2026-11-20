@@ -1,0 +1,9 @@
+ipykernel
+pip
+openai
+tiktoken
+numpy
+pydantic
+scikit-learn
+nbclient
+nbformat

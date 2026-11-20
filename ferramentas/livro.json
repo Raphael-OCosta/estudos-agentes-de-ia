@@ -1,0 +1,444 @@
+{
+ "titulo": "Building Applications with AI Agents",
+ "subtitulo": "Designing and Implementing Multiagent Systems",
+ "autor": "Michael Albada",
+ "repo": "estudos-agentes-de-ia",
+ "linguagem": "python",
+ "paginas": 571,
+ "preparacao": "import sys\nsys.path.insert(0, \"../comum\")  # ia.py: modelos via OpenRouter, com controle de gasto\nfrom ia import *\nimport json, re, time, random\nimport numpy as np\nprint(\"Pronto. Modelo padrão:\", MODELO)",
+ "capitulos": {
+  "1": {
+   "titulo": "Introdução aos agentes",
+   "pag": 19,
+   "secoes": [
+    [
+     2,
+     "Defining AI Agents",
+     19
+    ],
+    [
+     2,
+     "The Pretraining Revolution",
+     20
+    ],
+    [
+     2,
+     "Types of Agents",
+     22
+    ],
+    [
+     2,
+     "Model Selection",
+     25
+    ],
+    [
+     2,
+     "From Synchronous to Asynchronous Operations",
+     28
+    ],
+    [
+     2,
+     "Practical Applications and Use Cases",
+     30
+    ],
+    [
+     2,
+     "Workflows and Agents",
+     32
+    ],
+    [
+     2,
+     "Principles for Building Effective Agentic Systems",
+     36
+    ],
+    [
+     2,
+     "Organizing for Success in Building Agentic Systems",
+     38
+    ],
+    [
+     2,
+     "Agentic Frameworks",
+     39
+    ]
+   ]
+  },
+  "2": {
+   "titulo": "Projetando sistemas de agentes",
+   "pag": 43,
+   "secoes": [
+    [
+     2,
+     "Our First Agent System",
+     43
+    ],
+    [
+     2,
+     "Core Components of Agent Systems",
+     47
+    ],
+    [
+     2,
+     "Model Selection",
+     48
+    ],
+    [
+     2,
+     "Tools",
+     54
+    ],
+    [
+     2,
+     "Memory",
+     56
+    ],
+    [
+     2,
+     "Orchestration",
+     58
+    ],
+    [
+     2,
+     "Design Trade-Offs",
+     59
+    ],
+    [
+     2,
+     "Architecture Design Patterns",
+     65
+    ],
+    [
+     2,
+     "Best Practices",
+     69
+    ]
+   ]
+  },
+  "3": {
+   "titulo": "Experiência do usuário (UX) para agentes",
+   "pag": 78,
+   "secoes": [
+    [
+     2,
+     "Interaction Modalities",
+     80
+    ],
+    [
+     2,
+     "Synchronous Versus Asynchronous Agent Experiences",
+     103
+    ],
+    [
+     2,
+     "Context Retention and Continuity",
+     106
+    ],
+    [
+     2,
+     "Communicating Agent Capabilities",
+     110
+    ],
+    [
+     2,
+     "Trust in Interaction Design",
+     116
+    ]
+   ]
+  },
+  "4": {
+   "titulo": "Uso de ferramentas (Tool Use)",
+   "pag": 121,
+   "secoes": [
+    [
+     2,
+     "LangChain Fundamentals",
+     122
+    ],
+    [
+     2,
+     "Automated Tool Development",
+     142
+    ],
+    [
+     2,
+     "Tool Use Configuration",
+     145
+    ]
+   ]
+  },
+  "5": {
+   "titulo": "Orquestração",
+   "pag": 148,
+   "secoes": [
+    [
+     2,
+     "Agent Types",
+     149
+    ],
+    [
+     2,
+     "Tool Selection",
+     156
+    ],
+    [
+     2,
+     "Tool Execution",
+     175
+    ],
+    [
+     2,
+     "Tool Topologies",
+     176
+    ],
+    [
+     2,
+     "Context Engineering",
+     186
+    ]
+   ]
+  },
+  "6": {
+   "titulo": "Conhecimento e memória",
+   "pag": 189,
+   "secoes": [
+    [
+     2,
+     "Foundational Approaches to Memory",
+     191
+    ],
+    [
+     2,
+     "Semantic Memory and Vector Stores",
+     194
+    ],
+    [
+     2,
+     "GraphRAG",
+     201
+    ]
+   ]
+  },
+  "7": {
+   "titulo": "Aprendizado em sistemas agênticos",
+   "pag": 218,
+   "secoes": [
+    [
+     2,
+     "Nonparametric Learning",
+     218
+    ],
+    [
+     2,
+     "Parametric Learning: Fine-Tuning",
+     235
+    ]
+   ]
+  },
+  "8": {
+   "titulo": "De um agente para muitos (multiagentes)",
+   "pag": 260,
+   "secoes": [
+    [
+     2,
+     "How Many Agents Do I Need?",
+     260
+    ],
+    [
+     2,
+     "Principles for Adding Agents",
+     284
+    ],
+    [
+     2,
+     "Multiagent Coordination",
+     287
+    ],
+    [
+     2,
+     "Automated Design of Agent Systems",
+     293
+    ],
+    [
+     2,
+     "Communication Techniques",
+     300
+    ],
+    [
+     2,
+     "Message Brokers and Event Buses",
+     305
+    ],
+    [
+     2,
+     "Actor Frameworks: Ray, Orleans, and Akka",
+     309
+    ],
+    [
+     2,
+     "Orchestration and Workflow Engines",
+     315
+    ],
+    [
+     2,
+     "Managing State and Persistence",
+     318
+    ]
+   ]
+  },
+  "9": {
+   "titulo": "Validação e medição",
+   "pag": 325,
+   "secoes": [
+    [
+     2,
+     "Measuring Agentic Systems",
+     326
+    ],
+    [
+     2,
+     "Component Evaluation",
+     331
+    ],
+    [
+     2,
+     "Holistic Evaluation",
+     338
+    ],
+    [
+     2,
+     "Preparing for Deployment",
+     347
+    ]
+   ]
+  },
+  "10": {
+   "titulo": "Monitoramento em produção",
+   "pag": 351,
+   "secoes": [
+    [
+     2,
+     "Monitoring Is How You Learn",
+     352
+    ],
+    [
+     2,
+     "Monitoring Stacks",
+     358
+    ],
+    [
+     2,
+     "Choosing the Right Stack",
+     363
+    ],
+    [
+     2,
+     "OTel Instrumentation",
+     365
+    ],
+    [
+     2,
+     "Visualization and Alerting",
+     368
+    ],
+    [
+     2,
+     "Monitoring Patterns",
+     371
+    ],
+    [
+     2,
+     "User Feedback as an Observability Signal",
+     373
+    ],
+    [
+     2,
+     "Distribution Shifts",
+     374
+    ],
+    [
+     2,
+     "Metric Ownership and Cross-Functional Governance",
+     378
+    ]
+   ]
+  },
+  "11": {
+   "titulo": "Ciclos de melhoria",
+   "pag": 384,
+   "secoes": [
+    [
+     2,
+     "Feedback Pipelines",
+     388
+    ],
+    [
+     2,
+     "Experimentation",
+     412
+    ],
+    [
+     2,
+     "Continuous Learning",
+     420
+    ]
+   ]
+  },
+  "12": {
+   "titulo": "Protegendo sistemas agênticos",
+   "pag": 427,
+   "secoes": [
+    [
+     2,
+     "The Unique Risks of Agentic Systems",
+     428
+    ],
+    [
+     2,
+     "Emerging Threat Vectors",
+     433
+    ],
+    [
+     2,
+     "Securing Foundation Models",
+     438
+    ],
+    [
+     2,
+     "Protecting Data in Agentic Systems",
+     452
+    ],
+    [
+     2,
+     "Securing Agents",
+     459
+    ]
+   ]
+  },
+  "13": {
+   "titulo": "Colaboração humano-agente",
+   "pag": 473,
+   "secoes": [
+    [
+     2,
+     "Roles and Autonomy",
+     473
+    ],
+    [
+     2,
+     "Scaling Collaboration",
+     478
+    ],
+    [
+     2,
+     "Trust, Governance, and Compliance",
+     487
+    ],
+    [
+     2,
+     "Conclusion: The Future of Human-Agent Teams",
+     498
+    ]
+   ]
+  }
+ }
+}
